@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Detail Pemain</title>
+  </head>
+  <body>
+    <h1>Detail Pemain: <%= timnas.nama %></h1>
+    <img src="<%= timnas.foto %>" alt="Foto <%= timnas.nama %>" />
+    <p>Nomor Punggung: <%= timnas.no %></p>
+    <p>Informasi Tambahan: <%= timnas.detail %></p>
+    <!-- Jika 'alert' didefinisikan, tampilkan -->
+    <% if (typeof alert !== 'undefined') { %>
+    <p>Alert: <%= alert %></p>
+    <% } %>
+    <a href="/homepage" class="btn btn-info">Back</a>
+  </body>
+</html>

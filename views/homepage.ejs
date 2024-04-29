@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Homepage | Timnas</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark regular-shadow">
+      <img
+        src="https://png.pngtree.com/png-vector/20220930/ourmid/pngtree-the-symbol-of-republic-indonesia-garuda-pancasila-png-image_6238799.png"
+        alt=""
+        width="60"
+        height="60"
+      />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="/timnas" class="btn btn-info">CRUD</a>
+        </form>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <h2 class="text-center">DATA PEMAIN TIMNAS</h2>
+      <div class="container mt-5">
+        <div class="row">
+          <% for(let i = 0; i < timnas.length; i++){ %>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="<%= timnas[i].foto %>" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title"><%= timnas[i].nama %></h5>
+                <p class="card-title">No Punggung: <%= timnas[i].no %></p>
+                <a
+                  href="/timnas/detail/<%= timnas[i].id %>"
+                  class="btn btn-outline-primary btn-sm button-update"
+                  >Detail</a
+                >
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
